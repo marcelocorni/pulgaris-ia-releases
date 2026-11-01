@@ -1,47 +1,40 @@
-# Pulgaris 0.10.1 — 01/11/2026
+# Pulgaris 0.10.2 — 01/11/2026
 
-Plataforma Windows para simulações, treinamento de comunicação e preparação oral
-com documentos do próprio usuário: Academic, Interview, Oral e Present.
+## Correções
 
-## Mudanças
+- Importação com pasta de IA vazia apresenta orientação em português antes de ler o documento.
+- A Biblioteca permite escolher a pasta do ambiente de IA e salvá-la sem mudar de tela.
+- Preferências também oferece seleção de pasta, evitando digitar o caminho manualmente.
+- O carregador de embeddings valida a configuração antes de converter ou acessar o caminho.
 
-- Cards do início com dimensões iguais, espaçamento uniforme e proporções mais compactas.
-- Biblioteca local com indexação, respostas fundamentadas e citações dos documentos.
-- Reconhecimento de fala local e leitura na saída de áudio selecionada.
-- Ativação vinculada à instalação, renovação, expiração e confirmação offline limitada.
-- Aplicativo 0.10.1 e preparador 1.2.0 em instaladores Inno Setup com a identidade Pulgaris.
+## Como atualizar e importar
 
-## Instalação e atualização
+1. Encerre o aplicativo e instale Pulgaris-0.10.2-Setup-win-x64.exe.
+2. Na Biblioteca, clique em Escolher pasta e selecione a pasta do ambiente de IA
+   que contém models, llama.cpp e os iniciadores. Clique em Salvar pasta.
+3. Encerre modelos e embeddings que tenham sido iniciados manualmente.
+4. Com a conta ativada e o período de acesso válido, importe seu PDF.
 
-1. Confira REQUISITOS.md e os hashes em SHA256SUMS.txt.
-2. Encerre o aplicativo e execute Pulgaris-0.10.1-Setup-win-x64.exe.
-3. Para preparar uma nova pasta em pen drive/HD, use Pulgaris-Preparador-1.2.0-Setup-win-x64.exe.
-4. Configure a pasta de IA no aplicativo e ative sua conta em Conta e ativação.
+O aplicativo administra o início e o encerramento dos embeddings durante a
+indexação. PDFs digitalizados sem texto extraível exigem OCR; consulte os
+avisos apresentados após a extração. Os documentos são processados localmente.
 
-O preparador baixa versões fixadas de Qwen3.5 9B Q4_K_M, Ornith 1.5 9B Q4_K_M,
-Qwen3-Embedding 0.6B Q8_0 e llama.cpp b11853 CUDA 12.4. A preparação inicial
-baixa aproximadamente 12,94 GB. Use unidade NTFS/exFAT de pelo menos 32 GB,
-com 25 GiB livres; recomenda-se 64 GB e USB 3.0.
+O preparador correspondente é Pulgaris-Preparador-1.2.0-Setup-win-x64.exe.
+Para uma nova instalação de IA, prepare uma pasta vazia com o preparador.
+O ambiente existente pode continuar sendo selecionado nas configurações.
+Consulte INSTALACAO.md, REQUISITOS.md e SHA256SUMS.txt anexos.
 
-O aplicativo inclui Whisper base multilíngue congelado para transcrição local.
-O perfil suportado exige Windows 11 x64, 32 GB de RAM e GPU NVIDIA CUDA
-com pelo menos 12 GB de VRAM dedicada. Consulte as instruções completas anexas.
+## Componentes fixados e requisitos
 
-## Conta e licença
-
-Crie a conta em https://pulgaris.com.br e faça a ativação dentro do aplicativo.
-Uma instalação ativa por conta. As confirmações são renovadas periodicamente;
-o uso offline fica limitado a duas horas desde a última confirmação válida e
-ao período contratado. Para trocar de computador, libere o vínculo em Minha conta.
-Uma licença válida também é necessária para importar e indexar documentos.
+Qwen3.5 9B Q4_K_M, Ornith 1.5 9B Q4_K_M, Qwen3-Embedding 0.6B Q8_0,
+llama.cpp b11853 CUDA 12.4 e Whisper base multilíngue homologado.
+Windows 11 x64, 32 GB de RAM e GPU NVIDIA CUDA com 12 GB de VRAM dedicada.
+A preparação inicial baixa aproximadamente 12,94 GB e exige unidade
+NTFS/exFAT de pelo menos 32 GB com 25 GiB livres. Recomendado: 64 GB e USB 3.0.
 
 ## Validação
 
-Nove testes da interface e cinco renderizações de tamanhos/temas passaram na
-correção dos cards. O pacote Windows teve os arquivos, o runtime e o Whisper
-conferidos. O portal passou por 185 testes locais, incluindo MariaDB isolado.
-Os testes locais de pagamento e checkout usaram respostas simuladas; a
-conferência de pagamentos reais cabe aos testes na integração publicada.
-
-O software oferece avaliação qualitativa para treinamento. Revise as respostas
-e as referências aos documentos. As licenças de terceiros acompanham os pacotes.
+63 testes de biblioteca, configuração, interface, respostas e treinamento
+aprovados, incluindo a reprodução de pasta vazia e verificação de que nenhum
+modelo é iniciado nem índice publicado nesse caso. Serviços de IA simulados;
+o HD de desenvolvimento não foi alterado e não foram executados modelos reais.

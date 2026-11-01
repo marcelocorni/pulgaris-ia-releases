@@ -13,6 +13,13 @@ operações licenciadas. A conta de administrador não recebe licença de
 uso automaticamente. A janela offline termina em até duas horas ou no
 vencimento do plano, o que ocorrer primeiro.
 
+## Configurar a pasta de IA e importar
+
+Na Biblioteca, clique em **Escolher pasta…**, selecione a pasta que contém
+models, llama.cpp e os iniciadores e clique em **Salvar pasta**. O campo
+também está disponível em Preferências. Deixe os modelos iniciados manualmente
+encerrados antes de importar: o aplicativo administra os serviços da operação.
+
 ## Preparar pen drive / HD
 
 1. Confira [REQUISITOS.md](REQUISITOS.md), espaço e formato da unidade.
