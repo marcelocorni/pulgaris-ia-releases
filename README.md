@@ -8,7 +8,7 @@ verificações SHA-256**. Os fontes do Pulgaris ficam em repositório privado.
 A licença do aplicativo é comercial; dependências e modelos conservam suas
 respectivas licenças, disponíveis nos pacotes.
 
-**As novas edições estão em preparação.** Consulte os arquivos efetivamente
+**Versão atual: aplicativo 0.10.1 e preparador 1.2.0.** Consulte os arquivos efetivamente
 disponíveis na [página de releases](https://github.com/marcelocorni/pulgaris-ia-releases/releases).
 Não há instaladores hospedados no portal.
 
