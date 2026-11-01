@@ -15,11 +15,9 @@ Não há instaladores hospedados no portal.
 ## Antes de contratar
 
 Leia [REQUISITOS.md](REQUISITOS.md) e confira seu computador. O perfil atual
-usa Windows 11 x64, GPU NVIDIA CUDA com 12 GB de VRAM e uma margem conservadora
-de 32 GB de RAM. A referência de GPU é a RTX 3060 12 GB; os testes atuais
-foram realizados em máquina de 96 GB de RAM. O limite de 32 GB de RAM ainda
-precisa de validação específica. CPU sem GPU, Windows ARM e GPUs AMD/Intel
-não estão homologados neste pacote.
+exige Windows 11 x64, GPU NVIDIA CUDA com 12 GB de VRAM dedicada ou mais e
+32 GB de RAM ou mais. Execução sem GPU, Windows ARM e GPUs AMD/Intel
+não são suportados.
 
 Para a IA em pen drive/HD: unidade NTFS/exFAT de **32 GB ou maior** e
 **25 GiB livres** (aproximadamente 27 GB). **64 GB ou mais e USB 3.0 são

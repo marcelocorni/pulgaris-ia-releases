@@ -1,11 +1,11 @@
-# Compatibilidade do pacote — hardware-v1
+# Compatibilidade do pacote — hardware-v2
 
 | Item | Perfil atual |
 |---|---|
-| Sistema | Windows 11 x64, Intel/AMD; sem suporte homologado a Windows ARM. |
+| Sistema | Windows 11 x64, Intel/AMD. Windows ARM não é suportado. |
 | Processador | x64 com AVX2; 6 núcleos ou mais recomendados. |
-| RAM | Margem conservadora de 32 GB. Testes atuais em 96 GB; validação específica em 32 GB ainda pendente. |
-| GPU | NVIDIA CUDA com 12 GB de VRAM dedicada ou mais; referência RTX 3060 12 GB. Driver compatível com CUDA 12.4. |
+| RAM | 32 GB ou mais. |
+| GPU | NVIDIA CUDA com 12 GB de VRAM dedicada ou mais. |
 | Unidade dos modelos | NTFS/exFAT, 32 GB ou maior, 25 GiB livres no início da preparação. |
 | Recomendação de unidade | 64 GB ou mais, USB 3.0; SSD externo para reduzir o tempo de carregamento. |
 | Áudio | Microfone, saída de áudio e voz pt-BR instalada no Windows para usar a prática por voz. |
@@ -23,7 +23,7 @@ de 32.768 tokens. A etapa de embeddings usa CPU. GPU de 12 GB é memória
 dedicada, não memória compartilhada anunciada pelo Windows.
 
 O processamento apenas em CPU, GPUs AMD/Intel e configurações abaixo
-deste perfil **não foram homologados para esta distribuição**. A existência
+deste perfil **não são suportados**. A existência
 de alternativa CPU no runtime não representa garantia de desempenho.
 Resultados variam com o material e a carga do computador.
 
