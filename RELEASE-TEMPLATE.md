@@ -14,6 +14,8 @@
 
 Os dois instaladores usam Inno Setup. Compare os hashes com o arquivo
 SHA256SUMS.txt anexado a esta release. Nenhum fonte do aplicativo é incluído.
+O arquivo release.json acompanha os dois instaladores para atualizar os
+links de download direto do portal após a publicação dos assets.
 
 ## Instalação / atualização
 

@@ -12,6 +12,10 @@ respectivas licenças, disponíveis nos pacotes.
 disponíveis na [página de releases](https://github.com/marcelocorni/pulgaris-ia-releases/releases).
 Não há instaladores hospedados no portal.
 
+No [portal Pulgaris](https://pulgaris.com.br/#downloads), os botões **Baixar
+aplicativo** e **Baixar preparador** iniciam o download direto dos arquivos
+da release, após o login. Você não precisa navegar pela página do GitHub.
+
 ## Antes de contratar
 
 Leia [REQUISITOS.md](REQUISITOS.md) e confira seu computador. O perfil atual
@@ -30,6 +34,7 @@ recomendados**. FAT32 não comporta os modelos maiores que 4 GB.
 | `Pulgaris-<versão>-Setup-win-x64.exe` | Instala o aplicativo Windows, o runtime .NET e o Whisper base local. |
 | `Pulgaris-Preparador-<versão>-Setup-win-x64.exe` | Copia o preparador para uma nova pasta no pen drive ou HD. É pequeno; baixa os modelos e llama.cpp posteriormente. |
 | `SHA256SUMS.txt` | Permite conferir a integridade dos arquivos da mesma release. |
+| `release.json` | Metadados da distribuição usados para atualizar os links do portal. |
 
 Os dois assistentes são feitos em Inno Setup. Baixar um instalador não
 substitui a contratação e a ativação do aplicativo.
