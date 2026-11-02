@@ -1,84 +1,90 @@
 # Pulgaris — releases oficiais
 
-Simulações, treinamento de comunicação e preparação oral com o conhecimento
-do próprio usuário: **Academic, Interview, Oral e Present**.
+Plataforma local de simulações, treinamento de comunicação e preparação oral
+com o conhecimento do próprio usuário: **Academic, Interview, Oral e Present**.
 
-Este repositório público recebe **instaladores, changelogs, instruções e
-verificações SHA-256**. Os fontes do Pulgaris ficam em repositório privado.
-A licença do aplicativo é comercial; dependências e modelos conservam suas
-respectivas licenças, disponíveis nos pacotes.
+**Versão atual: aplicativo 0.13.3 e preparador 1.3.0.**
+Os instaladores, changelog e hashes estão na
+[release v0.13.3](https://github.com/marcelocorni/pulgaris-ia-releases/releases/tag/v0.13.3).
+Os fontes ficam em repositório privado. A licença do aplicativo é comercial;
+dependências e modelos conservam suas respectivas licenças.
 
-**Versão atual: aplicativo 0.10.2 e preparador 1.2.0.** Consulte os arquivos efetivamente
-disponíveis na [página de releases](https://github.com/marcelocorni/pulgaris-ia-releases/releases).
-Não há instaladores hospedados no portal.
+No [portal Pulgaris](https://pulgaris.com.br/#downloads), entre na sua conta
+e use **Baixar aplicativo** ou **Baixar preparador**. Os botões redirecionam
+diretamente aos arquivos oficiais; os instaladores ficam no GitHub.
 
-No [portal Pulgaris](https://pulgaris.com.br/#downloads), os botões **Baixar
-aplicativo** e **Baixar preparador** iniciam o download direto dos arquivos
-da release, após o login. Você não precisa navegar pela página do GitHub.
+## Escolher e instalar
 
-## Antes de contratar
-
-Leia [REQUISITOS.md](REQUISITOS.md) e confira seu computador. O perfil atual
-exige Windows 11 x64, GPU NVIDIA CUDA com 12 GB de VRAM dedicada ou mais e
-32 GB de RAM ou mais. Execução sem GPU, Windows ARM e GPUs AMD/Intel
-não são suportados.
-
-Para a IA em pen drive/HD: unidade NTFS/exFAT de **32 GB ou maior** e
-**25 GiB livres** (aproximadamente 27 GB). **64 GB ou mais e USB 3.0 são
-recomendados**. FAT32 não comporta os modelos maiores que 4 GB.
-
-## Qual instalador escolher?
-
-| Pacote | Finalidade |
+| Arquivo | Finalidade |
 |---|---|
-| `Pulgaris-<versão>-Setup-win-x64.exe` | Instala o aplicativo Windows, o runtime .NET e o Whisper base local. |
-| `Pulgaris-Preparador-<versão>-Setup-win-x64.exe` | Copia o preparador para uma nova pasta no pen drive ou HD. É pequeno; baixa os modelos e llama.cpp posteriormente. |
-| `SHA256SUMS.txt` | Permite conferir a integridade dos arquivos da mesma release. |
-| `release.json` | Metadados da distribuição usados para atualizar os links do portal. |
+| Pulgaris-0.13.3-Setup-win-x64.exe | Aplicativo Windows x64, runtime .NET, Whisper Small/Base e Kokoro pt-BR incluídos. |
+| Pulgaris-Preparador-1.3.0-Setup-win-x64.exe | Assistente pequeno para preparar uma nova pasta no pen drive ou HD. Runtime e modelos são baixados depois. |
+| SHA256SUMS.txt | Hashes dos arquivos desta release. |
+| release.json | Versões e arquivos usados pelos links do portal. |
 
-Os dois assistentes são feitos em Inno Setup. Baixar um instalador não
-substitui a contratação e a ativação do aplicativo.
+Leia [INSTALACAO.md](INSTALACAO.md) e [REQUISITOS.md](REQUISITOS.md).
+Feche o aplicativo antes de atualizar sobre a instalação atual. A atualização
+preserva biblioteca, histórico, configurações e ativação.
 
-## Instalar e ativar
+## Preparação e uso
 
-1. Baixe os arquivos da release desejada e confira o changelog.
-2. Verifique o SHA-256 com `Get-FileHash -Algorithm SHA256 'arquivo.exe'` e
-   compare com `SHA256SUMS.txt` daquela release.
-3. Instale o aplicativo e execute o preparador em uma **nova pasta vazia**
-   da unidade escolhida. Nenhuma unidade é formatada.
-4. Execute `Preparar-Pulgaris.cmd`. O mesmo fluxo baixa, verifica e prepara
-   runtime e modelos. São **12.937.222.832 bytes (~12,94 GB)** de downloads.
-5. Informe a pasta preparada nas configurações do aplicativo.
-6. Ative com sua conta e licença do [portal Pulgaris](https://pulgaris.com.br).
+1. Instale o aplicativo e ative em **Conta e ativação**, com sua conta e período válido.
+2. Execute o preparador numa nova pasta da unidade escolhida, como X:\Pulgaris-AI.
+3. Abra **Preparar-Pulgaris.cmd**. O mesmo script baixa, verifica e instala os
+   componentes congelados. Responda **S** para incluir Gemma experimental ou **N**
+   para manter o conjunto padrão de Qwen, Ornith e embeddings.
+4. Selecione a pasta preparada no aplicativo e importe seu documento na Biblioteca.
+   A indexação é automática.
+5. No Simulador, escolha a modalidade e a quantidade. O roteiro é preparado
+   antes e as perguntas são apresentadas uma por vez. É possível avaliar a cada
+   resposta ou responder tudo antes da avaliação.
+6. **Perguntar à IA** permite fazer suas próprias perguntas ao documento, com citações.
 
-Veja o [guia completo](INSTALACAO.md). Cada release informa suas versões,
-mudanças, limitações e instruções específicas. Não reutilize hashes de
-outra release.
+Os atalhos podem ser configurados em Preferências e funcionam com o Pulgaris em
+foco. Microfone, saída e volume são salvos. A leitura automática de perguntas
+pode ser desativada; o botão permite ouvi-las novamente.
 
-## Modelos fixados
+## Modelos e recursos congelados
 
-| Componente | Versão / quantização | Bytes |
+| Componente | Versão | Bytes |
 |---|---|---:|
+| Qwen, padrão | 3.5 9B Q4_K_M | 5.680.522.464 |
 | Ornith | 1.5 9B Q4_K_M | 5.780.090.816 |
-| Qwen | 3.5 9B Q4_K_M | 5.680.522.464 |
+| Gemma, opcional e experimental | 4 E4B IT QAT Q4_0 | 5.154.941.280 |
 | Embeddings | Qwen3-Embedding 0.6B Q8_0 | 639.150.592 |
-| Transcrição | Whisper base multilíngue GGML | 147.951.465 |
-| Runtime de IA | llama.cpp b11853, CUDA 12.4 | Downloads fixados pelo preparador |
+| Transcrição incluída no aplicativo | Whisper Small multilíngue | 487.601.967 |
+| Transcrição rápida incluída | Whisper Base multilíngue | 147.951.465 |
+| Síntese incluída | Kokoro 82M v1.0 FP32 ONNX | 325.508.342 |
+| Vozes pt-BR incluídas | Dora, Alex e Santa | 522.368 por voz |
+| Runtime externo de IA | llama.cpp b11853, CUDA 12.4 | Fixado pelo preparador |
 
-Somente um modelo é usado por vez. Ao terminar, use o respectivo controle
-**Parar**. Os modelos não são iniciados automaticamente. A voz utiliza uma
-voz pt-BR instalada no Windows; não há modelo ONNX próprio neste pacote.
+Kokoro não exige vozes instaladas no Windows. Velocidade, pausas e dicionário
+de pronúncia são configuráveis. Revisão textual da transcrição é opcional e
+só substitui o texto após confirmação.
 
-## Licenciamento e privacidade
+A preparação padrão baixa **12.937.222.832 bytes (~12,94 GB)**. Incluir Gemma
+acrescenta **5.154.941.280 bytes**, totalizando **18.092.164.112 bytes (~18,09 GB)**.
+O instalador pequeno não contém esses pesos. Revisões e SHA256 constam no
+manifesto de modelos anexo à release; não se usam versões latest.
+
+Qwen continua padrão. Gemma é uma opção experimental no modo avançado.
+Granite não está incluído. Um modelo por vez, incluindo embeddings. O aplicativo
+administra os serviços das operações; deixe servidores manuais encerrados.
+Ao usar iniciadores diretamente, finalize pelo controle Parar correspondente.
+
+## Requisitos e licença
+
+Windows 11 x64, AVX2, 32 GB de RAM e GPU NVIDIA CUDA com 12 GB de VRAM dedicada
+ou mais. CPU sem GPU, Windows ARM e GPUs AMD/Intel não são suportados.
+
+Para o conjunto padrão: NTFS/exFAT, unidade de 32 GB ou maior e 25 GiB livres.
+Com Gemma: unidade de 64 GB ou maior e **32 GiB livres** na preparação.
+USB 3.0 é recomendado; FAT32 não comporta os modelos maiores que 4 GB.
 
 Uma instalação ativa por conta. Ativação e verificações periódicas exigem
-internet. A licença permite até **2 horas offline**, limitadas à validade
-do período contratado. Para trocar de computador, libere o vínculo na sua
-conta. Documentos, gravações e respostas das simulações permanecem locais.
+internet; uso offline de até duas horas, limitado ao período contratado.
+Documentos e respostas permanecem locais. A avaliação é qualitativa:
+confira as fontes; ela não equivale à nota de uma banca nem garante aprovação.
 
-Feedback qualitativo: confira as referências. O aplicativo não atribui nota
-oficial nem garante aprovação em avaliações, entrevistas ou apresentações.
-
-Contato e condições comerciais: [pulgaris.com.br](https://pulgaris.com.br).
-Não publique senhas, chaves de ativação, documentos ou dados de pagamento
-em issues ou comentários deste repositório.
+Contato e condições: [pulgaris.com.br](https://pulgaris.com.br).
+Não publique senhas, documentos ou dados de pagamento em issues.

@@ -1,60 +1,84 @@
-# Instalação e atualização
+# Instalação, atualização e uso — 0.13.3
 
-## Aplicativo
+## Instalar o aplicativo
 
-Instale `Pulgaris-<versão>-Setup-win-x64.exe` da release escolhida. O pacote
-inclui o runtime .NET e o Whisper base homologado, com tamanho e hash
-conferidos antes da transcrição. Para síntese, instale uma voz pt-BR pelo
-Windows. O aplicativo não inclui uma voz neural ONNX.
+Confira o SHA256 do instalador com o arquivo SHA256SUMS.txt da mesma release.
+Feche o Pulgaris e instale **Pulgaris-0.13.3-Setup-win-x64.exe** sobre a instalação
+atual. A biblioteca, histórico, preferências e ativação são preservados.
+O pacote inclui .NET, Whisper Small/Base e Kokoro com Dora, Alex e Santa em pt-BR.
 
-Ative pela área **Conta e ativação** do aplicativo com os dados do portal.
-Uma conta precisa de período válido e verificação para habilitar as
-operações licenciadas. A conta de administrador não recebe licença de
-uso automaticamente. A janela offline termina em até duas horas ou no
-vencimento do plano, o que ocorrer primeiro.
+Ative em **Conta e ativação** com sua conta do portal e período válido.
+A conta de administrador não recebe licença de uso automaticamente.
+Uma instalação ativa por conta; até duas horas offline, limitadas à validade
+do período contratado. Libere o vínculo no portal para trocar de computador.
 
-## Configurar a pasta de IA e importar
+## Preparar outro pen drive ou HD
 
-Na Biblioteca, clique em **Escolher pasta…**, selecione a pasta que contém
-models, llama.cpp e os iniciadores e clique em **Salvar pasta**. O campo
-também está disponível em Preferências. Deixe os modelos iniciados manualmente
-encerrados antes de importar: o aplicativo administra os serviços da operação.
+1. Confira REQUISITOS.md e use NTFS ou exFAT.
+2. Execute **Pulgaris-Preparador-1.3.0-Setup-win-x64.exe** e selecione uma
+   **nova pasta**, por exemplo X:\Pulgaris-AI. Nenhuma unidade é formatada.
+3. Abra **Preparar-Pulgaris.cmd**. Responda **S** para incluir Gemma experimental
+   (+5,15 GB) ou **N** para manter Qwen, Ornith e embeddings.
+4. O mesmo script baixa, confere SHA256 e prepara runtime, modelos e comandos.
+   O requisito Microsoft pode pedir autorização do Windows. Nenhum modelo é
+   iniciado ao concluir. Se houver interrupção, execute novamente para retomar.
+5. Selecione essa pasta nas configurações do ambiente local do aplicativo.
 
-## Preparar pen drive / HD
+Com Gemma, reserve 32 GiB livres em unidade de 64 GB ou maior.
+A escolha é conservada para retomar uma preparação interrompida. Não substitua
+manualmente pesos por versões de nome parecido nem use uma instalação de outro
+projeto como destino do preparador.
 
-1. Confira [REQUISITOS.md](REQUISITOS.md), espaço e formato da unidade.
-2. Abra o instalador do preparador e escolha uma **nova pasta vazia**,
-   como `X:\Pulgaris-AI`. Não escolha a raiz nem uma instalação já existente.
-3. Ao terminar, execute **Preparar-Pulgaris.cmd**. O script único baixa e
-   confere todos os recursos fixados, instala o requisito Microsoft quando
-   necessário e organiza modelos, runtime e controles. Não troca as versões
-   por arquivos `latest`.
-4. Se o download for interrompido, execute o mesmo script para retomá-lo.
-   Nenhum arquivo com hash divergente é utilizado.
-5. Informe essa pasta nas configurações de IA local do Pulgaris.
+Comandos individuais: Iniciar/Parar-Qwen35, Iniciar/Parar-Ornith,
+Iniciar/Parar-Embeddings e, se incluído, Iniciar/Parar-Gemma4E4B.
+Use somente um modelo por vez. Antes das operações do aplicativo, encerre os
+servidores abertos manualmente; o Pulgaris preserva serviços preexistentes.
 
-O resultado oferece seis controles:
+Um ambiente Pulgaris já preparado pode continuar sendo usado com Qwen e Ornith.
+Para testar Gemma, selecione uma pasta que contenha a revisão congelada e seus
+iniciadores. Os iniciadores experimentais previamente fornecidos são compatíveis;
+não é preciso refazer esse ambiente se ele já contém o modelo conferido.
 
-- Iniciar / Parar Ornith;
-- Iniciar / Parar Qwen35;
-- Iniciar / Parar Embeddings.
+## Biblioteca, simulação e perguntas à IA
 
-Use um modelo por vez e pare antes de trocar. Pare também ao encerrar o
-trabalho para liberar hardware. O preparador não inicia modelos sozinho.
-O requisito Microsoft pode solicitar autorização do Windows; os modelos
-e o runtime são obtidos pelo mesmo fluxo de preparação.
+Importe o documento na Biblioteca e aguarde a indexação automática. Os controles
+técnicos ficam no modo avançado. No Simulador, escolha documento, modalidade e
+quantidade; o aplicativo prepara as N perguntas e apresenta uma por vez.
 
-## Atualizações
+- Em **Avaliar a cada resposta**, envie a resposta e consulte a comparação,
+  a resposta de referência e as fontes.
+- Em **Responder tudo e avaliar ao final**, salve cada resposta e avance.
+  Ao terminar, avalie todas.
+- Se faltarem perguntas válidas, **Avaliar respostas salvas** permite encerrar
+  e avaliar o que já foi respondido, sem recuperar pelo histórico.
+- O roteiro e as respostas são salvos para retomada. A contagem planejada continua
+  no relatório quando a sessão termina antes.
+- Em **Perguntar à IA**, digite ou dite uma pergunta sobre o documento selecionado.
 
-Leia o changelog e as instruções da release antes de atualizar. Preserve
-a biblioteca local e os dados da conta. Para um kit de IA com manifesto
-diferente, prepare outra pasta e só então escolha a nova pasta no aplicativo.
-Não sobrescreva manualmente pesos homologados por modelos de nome parecido.
+Qwen é padrão. Ative **Modo avançado** para escolher
+**Gemma 4 E4B (experimental)** ou Ornith. A seleção das consultas é salva no perfil;
+as simulações registram o modelo escolhido na sessão.
 
-O preparador não registra desinstalador para excluir seus modelos ou
-documentos. Remover o aplicativo não deve ser usado para apagar a biblioteca.
-Faça cópia dos seus dados antes de remover ou substituir uma pasta.
+## Voz e teclado
 
-Para outro PC, libere a instalação ativa pelo portal antes de ativar a
-nova. Uma confirmação offline anterior pode permanecer válida até o fim
-da sua janela; a próxima consulta online aplica a liberação.
+Selecione microfone e saída em Áudio; as escolhas e o volume são salvos.
+Whisper Small prioriza qualidade, e Base prioriza velocidade.
+Revise a transcrição antes de enviá-la. A revisão opcional com IA mantém o original
+e exige escolher Usar sugestão para substituir o texto.
+
+Kokoro lê na saída escolhida, sem alterar o dispositivo padrão do Windows.
+Em Preferências, ajuste voz, velocidade, pausas e pronúncia.
+Novas perguntas podem ser lidas automaticamente; o botão permanece para repetir.
+O microfone só é ligado por ação do usuário.
+
+Atalhos são configuráveis em Preferências e funcionam com a janela em foco.
+O padrão Ctrl+Shift+F6 salva e avança na avaliação ao final; Ctrl+Shift+F2 avalia
+as respostas salvas quando a ação está disponível.
+
+## Verificação e limites
+
+Os instaladores são Inno Setup e ainda não possuem assinatura digital comercial.
+A release inclui hashes, changelog e instruções para conferência.
+Gemma é experimental; quantidade de perguntas geradas e referências existentes
+não garantem todas as interpretações da IA. Confira as fontes e compare com Qwen.
+Preserve seus dados ao remover ou substituir uma pasta.
