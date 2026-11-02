@@ -1,4 +1,4 @@
-# Compatibilidade — aplicativo 0.13.3 e preparador 1.3.0
+# Compatibilidade — aplicativo 0.14.1 e preparador 1.3.0
 
 | Item | Perfil suportado |
 |---|---|

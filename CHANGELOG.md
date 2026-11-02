@@ -1,3 +1,70 @@
+# Pulgaris 0.14.1 + preparador 1.3.0 — 02/11/2026
+
+Aplicativo e preparador Windows x64, com os dois instaladores Inno Setup.
+Esta release reúne as melhorias de voz das versões 0.14.0 e 0.14.1.
+O preparador 1.3.0 e os modelos congelados são os mesmos da release anterior.
+
+## O que mudou
+
+- Dicionário de pronúncia por documento, disponível na Biblioteca.
+- Sugestões locais da IA em rascunho, com revisão e salvamento explícito.
+  Novas sugestões acrescentam termos ausentes, preservando as pronúncias revisadas.
+- Simulação e Perguntar à IA utilizam as pronúncias salvas do documento;
+  as gerais de Preferências permanecem disponíveis. As específicas têm prioridade.
+- Pronúncias numéricas automáticas para inteiros, decimais, datas, horários,
+  valores, porcentagens, unidades usuais, ordinais e notação científica com e.
+- Preservação de casas decimais e zeros, sem arredondamento. Exemplos:
+  `0,10244` é lido como zero vírgula um zero dois quatro quatro;
+  `2 batatas` e `2 livros` recebem duas batatas e dois livros.
+- Regras numéricas complementam os dicionários existentes e respeitam suas
+  correções manuais. Documentos, perguntas, respostas e relatórios ficam intactos.
+- Barra animada durante o preparo da voz pelo botão ou Ctrl+Shift+F11.
+- Reutilização dos áudios prontos em memória: até 16 itens/64 MiB, com saída e
+  volume atuais. O cache é limpo ao fechar; itens antigos podem ser descartados.
+- Mudanças de texto, voz, velocidade, pausas, dicionário ou regras de leitura
+  exigem áudio correspondente à nova configuração.
+
+## Arquivos
+
+| Instalador | Bytes | SHA-256 |
+|---|---:|---|
+| Pulgaris-0.14.1-Setup-win-x64.exe | 1.000.026.783 | b0665a11315dd85f568b14ffb069adce055e7012a5407bf8e5cc71b5c65a2256 |
+| Pulgaris-Preparador-1.3.0-Setup-win-x64.exe | 3.057.430 | 4aaae1bbdd31aea136b0057eec729170a2ddc861847f3087a069203c2b4ba024 |
+
+Incluídos: instruções, requisitos, SHA256SUMS, manifesto de downloads,
+dependências, modelos congelados e avisos de terceiros. Os fontes são privados.
+
+## Atualizar e testar
+
+1. Feche o Pulgaris e instale a versão 0.14.1 sobre a instalação atual.
+2. A atualização preserva a biblioteca, preferências, histórico e ativação;
+   adiciona o armazenamento dos dicionários quando necessário.
+3. Abra o dicionário de um documento, peça sugestões e revise antes de salvar.
+4. Leia uma pergunta ou resposta com números e repita para conferir a reutilização.
+5. O preparador não mudou: um HD Pulgaris já preparado pode continuar em uso.
+
+Kokoro com Dora, Alex e Santa, Whisper Small/Base, Qwen3.5, Ornith e Gemma
+experimental permanecem nas mesmas revisões. Nenhum modelo adicional precisa
+ser baixado para usar estas melhorias de voz. O Small continua padrão para
+priorizar qualidade de transcrição; o Medium não foi acrescentado.
+
+## Validação e limites
+
+398 testes locais aprovados, incluindo interface sem janelas nativas, números,
+concordância, prioridade e preservação dos dicionários, cancelamento e áudio
+reutilizado. Pacote Windows conferido por manifesto e SHA-256; SQLite/FTS5,
+Kokoro e Whisper verificados com dados isolados. Uma amostra numérica foi
+sintetizada com Kokoro real para arquivo, sem captura de microfone ou reprodução.
+
+As regras de concordância cobrem casos usuais e não equivalem a uma análise
+semântica irrestrita. Formatos ambíguos podem exigir uma pronúncia personalizada.
+A IA pode sugerir pronúncias inadequadas; revise antes de salvar. A avaliação
+continua qualitativa e exige conferir as fontes. Os EXEs ainda não possuem
+assinatura digital comercial. Requisitos e uso offline não mudaram.
+
+
+---
+
 # Pulgaris 0.13.3 + preparador 1.3.0 — 02/11/2026
 
 Aplicativo e preparador Windows x64, com os dois instaladores Inno Setup.

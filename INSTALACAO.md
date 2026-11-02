@@ -1,9 +1,9 @@
-# Instalação, atualização e uso — 0.13.3
+# Instalação, atualização e uso — 0.14.1
 
 ## Instalar o aplicativo
 
 Confira o SHA256 do instalador com o arquivo SHA256SUMS.txt da mesma release.
-Feche o Pulgaris e instale **Pulgaris-0.13.3-Setup-win-x64.exe** sobre a instalação
+Feche o Pulgaris e instale **Pulgaris-0.14.1-Setup-win-x64.exe** sobre a instalação
 atual. A biblioteca, histórico, preferências e ativação são preservados.
 O pacote inclui .NET, Whisper Small/Base e Kokoro com Dora, Alex e Santa em pt-BR.
 
@@ -74,6 +74,29 @@ O microfone só é ligado por ação do usuário.
 Atalhos são configuráveis em Preferências e funcionam com a janela em foco.
 O padrão Ctrl+Shift+F6 salva e avança na avaliação ao final; Ctrl+Shift+F2 avalia
 as respostas salvas quando a ação está disponível.
+
+## Dicionários e números na leitura
+
+Na Biblioteca, selecione o documento e abra **Pronúncia de…**. Clique em
+**Sugerir com IA**, revise o rascunho e escolha **Salvar dicionário**. Novas
+sugestões acrescentam termos ausentes e preservam suas correções. Também é
+possível criar ou editar manualmente, no formato **Ethereum = Etéreum**.
+
+No Simulador e em Perguntar à IA, **Usar pronúncias salvas deste documento**
+aplica o dicionário correspondente; **Revisar dicionário** abre seu editor.
+Sem dicionário específico, as pronúncias gerais de Preferências continuam em uso.
+As entradas do documento têm prioridade, e as pronúncias numéricas automáticas
+complementam os dois dicionários sem substituir os termos salvos.
+
+Exemplos: **0,10244** vira zero vírgula um zero dois quatro quatro; **2 batatas**
+vira duas batatas; datas completas, horários, moedas e porcentagens têm leitura
+própria. Os textos da biblioteca, das perguntas e dos relatórios são preservados.
+Datas inválidas ou formatos ambíguos não recebem uma interpretação inventada.
+
+A barra animada indica o preparo. Ouvir novamente, pelo botão ou **Ctrl+Shift+F11**,
+reutiliza o áudio compatível na saída atual. O cache fica somente em memória,
+com limite de 16 áudios/64 MiB, e é limpo ao fechar o aplicativo. Mudanças no texto,
+na voz, velocidade, pausas ou dicionário produzem novo áudio quando necessário.
 
 ## Verificação e limites
 

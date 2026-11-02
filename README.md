@@ -3,9 +3,9 @@
 Plataforma local de simulações, treinamento de comunicação e preparação oral
 com o conhecimento do próprio usuário: **Academic, Interview, Oral e Present**.
 
-**Versão atual: aplicativo 0.13.3 e preparador 1.3.0.**
+**Versão atual: aplicativo 0.14.1 e preparador 1.3.0.**
 Os instaladores, changelog e hashes estão na
-[release v0.13.3](https://github.com/marcelocorni/pulgaris-ia-releases/releases/tag/v0.13.3).
+[release v0.14.1](https://github.com/marcelocorni/pulgaris-ia-releases/releases/tag/v0.14.1).
 Os fontes ficam em repositório privado. A licença do aplicativo é comercial;
 dependências e modelos conservam suas respectivas licenças.
 
@@ -17,7 +17,7 @@ diretamente aos arquivos oficiais; os instaladores ficam no GitHub.
 
 | Arquivo | Finalidade |
 |---|---|
-| Pulgaris-0.13.3-Setup-win-x64.exe | Aplicativo Windows x64, runtime .NET, Whisper Small/Base e Kokoro pt-BR incluídos. |
+| Pulgaris-0.14.1-Setup-win-x64.exe | Aplicativo Windows x64, runtime .NET, Whisper Small/Base e Kokoro pt-BR incluídos. |
 | Pulgaris-Preparador-1.3.0-Setup-win-x64.exe | Assistente pequeno para preparar uma nova pasta no pen drive ou HD. Runtime e modelos são baixados depois. |
 | SHA256SUMS.txt | Hashes dos arquivos desta release. |
 | release.json | Versões e arquivos usados pelos links do portal. |
@@ -43,6 +43,25 @@ preserva biblioteca, histórico, configurações e ativação.
 Os atalhos podem ser configurados em Preferências e funcionam com o Pulgaris em
 foco. Microfone, saída e volume são salvos. A leitura automática de perguntas
 pode ser desativada; o botão permite ouvi-las novamente.
+
+## Pronúncia e repetição da voz
+
+Na Biblioteca, cada documento pode ter seu dicionário de pronúncia. **Sugerir
+com IA** acrescenta termos ao rascunho, preservando as correções existentes.
+Revise e clique em **Salvar dicionário**. Simulação e Perguntar à IA usam as
+pronúncias salvas do documento; elas têm prioridade sobre as gerais.
+
+Números, datas, horários, valores e unidades usuais recebem pronúncias automáticas.
+A parte decimal preserva todos os dígitos; quantidades usuais recebem concordância,
+como **duas batatas** e **dois livros**. As regras complementam os dicionários e
+respeitam correções manuais. Os textos originais permanecem intactos.
+
+Uma barra indica o preparo da voz, inclusive pelo atalho **Ctrl+Shift+F11**.
+Áudios prontos são reutilizados em memória (até 16 itens/64 MiB), usando saída e
+volume atuais. Alterar texto, voz, velocidade, pausas ou dicionário exige áudio
+compatível. Itens removidos do cache e a primeira leitura após fechar o aplicativo
+precisam de novo preparo. A concordância usa regras para casos usuais; expressões
+ambíguas podem receber correções no dicionário.
 
 ## Modelos e recursos congelados
 
