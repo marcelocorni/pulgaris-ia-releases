@@ -3,9 +3,9 @@
 Plataforma local de simulações, treinamento de comunicação e preparação oral
 com o conhecimento do próprio usuário: **Academic, Interview, Oral e Present**.
 
-**Versão atual: aplicativo 0.15.1 e preparador 1.3.0.**
+**Versão atual: aplicativo 0.15.2 e preparador 1.3.0.**
 Os instaladores, changelog e hashes estão na
-[release v0.15.1](https://github.com/marcelocorni/pulgaris-ia-releases/releases/tag/v0.15.1).
+[release v0.15.2](https://github.com/marcelocorni/pulgaris-ia-releases/releases/tag/v0.15.2).
 Os fontes ficam em repositório privado. A licença do aplicativo é comercial;
 dependências e modelos conservam suas respectivas licenças.
 
@@ -17,7 +17,7 @@ diretamente aos arquivos oficiais; os instaladores ficam no GitHub.
 
 | Arquivo | Finalidade |
 |---|---|
-| Pulgaris-0.15.1-Setup-win-x64.exe | Aplicativo Windows x64, runtime .NET, Whisper Small/Base e Kokoro pt-BR incluídos. |
+| Pulgaris-0.15.2-Setup-win-x64.exe | Aplicativo Windows x64, runtime .NET, Whisper Small/Base e Kokoro pt-BR incluídos. |
 | Pulgaris-Preparador-1.3.0-Setup-win-x64.exe | Assistente pequeno para preparar uma nova pasta no pen drive ou HD. Runtime e modelos são baixados depois. |
 | SHA256SUMS.txt | Hashes dos arquivos desta release. |
 | release.json | Versões e arquivos usados pelos links do portal. |
@@ -25,6 +25,13 @@ diretamente aos arquivos oficiais; os instaladores ficam no GitHub.
 Leia [INSTALACAO.md](INSTALACAO.md) e [REQUISITOS.md](REQUISITOS.md).
 Feche o aplicativo antes de atualizar sobre a instalação atual. A atualização
 preserva biblioteca, histórico, configurações e ativação.
+
+## Ajuda e Wiki
+
+Abra **Ajuda** no aplicativo para ler a cópia offline ou acessar
+[a Wiki online](https://pulgaris.com.br/manual/). São 22 tópicos com busca,
+índice, impressão por assunto e um material de exemplo. O manual também pode
+ser baixado separadamente na release. Veja [MANUAL.md](MANUAL.md).
 
 ## Resolver um vínculo anterior
 
@@ -98,7 +105,7 @@ As respostas passam por verificação de fontes e uma conferência semântica lo
 Quando não há segurança para concluir, a avaliação fica inconclusiva. Confira
 as fontes; perguntas com várias partes exigem resposta a todas elas.
 
-O pacote menor de código 0.15.1 exige instalação 0.15.0 ou posterior e vem com
+O pacote menor de código 0.15.2 exige instalação 0.15.0 ou posterior e vem com
 manifesto assinado. Ele preserva modelos de voz e dados. Para versões anteriores
 ou uma instalação nova, use o setup completo desta edição. A assinatura do manifesto não é assinatura
 Authenticode do instalador; os EXEs desta edição continuam sem essa assinatura.

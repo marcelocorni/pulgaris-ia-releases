@@ -1,9 +1,9 @@
-# Instalação, atualização e uso — 0.15.1
+# Instalação, atualização e uso — 0.15.2
 
 ## Instalar o aplicativo
 
 Confira o SHA256 do instalador com o arquivo SHA256SUMS.txt da mesma release.
-Feche o Pulgaris e instale **Pulgaris-0.15.1-Setup-win-x64.exe** sobre a instalação
+Feche o Pulgaris e instale **Pulgaris-0.15.2-Setup-win-x64.exe** sobre a instalação
 atual. A biblioteca, histórico, preferências e ativação são preservados.
 O pacote inclui .NET, Whisper Small/Base e Kokoro com Dora, Alex e Santa em pt-BR.
 
@@ -115,7 +115,7 @@ na voz, velocidade, pausas ou dicionário produzem novo áudio quando necessári
 - **PDF digitalizado:** o OCR opcional depende do reconhecimento de Português
   instalado no Windows. O processamento continua local.
 
-Para migrar da 0.15.0, você pode usar o pacote menor 0.15.1 e seu manifesto
+Para migrar da 0.15.0, você pode usar o pacote menor 0.15.2 e seu manifesto
 assinado, conforme ATUALIZACAO.md, ou instalar o setup completo. De versões
 anteriores à 0.15.0, use o instalador completo. Mantenha backup antes de atualizar.
 
@@ -126,3 +126,8 @@ A release inclui hashes, changelog e instruções para conferência.
 Gemma é experimental; quantidade de perguntas geradas e referências existentes
 não garantem todas as interpretações da IA. Confira as fontes e compare com Qwen.
 Preserve seus dados ao remover ou substituir uma pasta.
+
+## Ajuda
+
+Abra **Ajuda** no aplicativo e escolha **Abrir manual offline** ou **Abrir manual online**.
+O portal também oferece **Ajuda**. Leia MANUAL.md para obter uma cópia independente da Wiki.

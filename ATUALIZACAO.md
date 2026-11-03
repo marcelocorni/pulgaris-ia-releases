@@ -1,9 +1,9 @@
-# Atualizar de 0.15.0 para 0.15.1
+# Atualizar de 0.15.0 para 0.15.2
 
-Se você já tem o Pulgaris 0.15.0 instalado, pode usar a atualização menor de
+Se você já tem o Pulgaris 0.15.0 ou 0.15.1 instalado, pode usar a atualização menor de
 código. Não é necessário baixar novamente os modelos de voz.
 
-1. Baixe **Pulgaris-0.15.1-code-win-x64.zip** e **Pulgaris-0.15.1-update.json**
+1. Baixe **Pulgaris-0.15.2-code-win-x64.zip** e **Pulgaris-0.15.2-update.json**
    da mesma release oficial. Mantenha os dois arquivos na mesma pasta.
 2. No aplicativo, abra **Sistema e suporte** e use **Conferir pacote de atualização…**.
 3. Selecione o manifesto e o ZIP quando solicitado. Aguarde a conferência da

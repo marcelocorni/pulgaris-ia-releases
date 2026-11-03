@@ -1,30 +1,29 @@
-# Pulgaris 0.15.1 — Windows x64
+# Pulgaris 0.15.2 — Wiki no menu Ajuda
 
-Aplicativo **0.15.1**, preparador **1.3.0**. Publicação autorizada em **3 de novembro de 2026**.
+Aplicativo **0.15.2**, preparador **1.3.0**. Publicação autorizada em **3 de novembro de 2026**.
 
-## Resolver o vínculo sem depender do suporte
+## O que mudou
 
-- A mensagem explica que uma sessão anterior pode permanecer vinculada após reinstalar ou trocar de computador.
-- Em Conta e ativação, **Liberar vínculo anterior…** abre uma confirmação dentro do aplicativo.
-- Informe novamente a senha e escolha **Confirmar e ativar aqui**. O vínculo anterior é liberado e a instalação atual é ativada em uma única operação.
-- Cancelar ou informar senha incorreta preserva a sessão anterior. Trocar o e-mail cancela a confirmação em aberto.
-- Documentos, treinamentos, configurações e período contratado são preservados.
-- A sessão anterior não pode renovar online. Uma confirmação offline já emitida permanece limitada ao seu prazo de até duas horas e à validade contratada.
+- O menu **Ajuda** está disponível no modo simples e no modo avançado do aplicativo.
+- **Abrir manual offline** consulta a Wiki incluída na instalação, pelo navegador, sem internet ou ativação.
+- **Abrir manual online** abre https://pulgaris.com.br/manual/.
+- O portal público e as páginas de conta e administração têm o link **Ajuda**.
+- A Wiki tem **22 tópicos e 94 seções**, índice por assunto, busca sem acentos, impressão por tópico e um texto fictício para praticar o primeiro uso.
+- O manual cobre importação automática, avaliação imediata ou ao final, Perguntar à IA, voz, pronúncias, atalhos, projetos, backup, atualização e solução de problemas.
+- A busca do manual é local. Não acessa documentos, respostas, licença, cookies ou dados do usuário.
 
-## Atualizar
+## Instalar ou atualizar
 
-O instalador completo atualiza a instalação existente. Quem usa a 0.15.0 pode
-optar pelo ZIP menor de código e seu manifesto assinado, conforme **ATUALIZACAO.md**.
-A atualização do portal foi publicada junto com o aplicativo para habilitar o fluxo.
-O preparador 1.3.0 e os modelos congelados permanecem iguais.
+Use **Pulgaris-0.15.2-Setup-win-x64.exe** para uma instalação nova ou para atualizar a instalação atual.
 
-## Validação
+Quem já utiliza **0.15.0 ou 0.15.1** pode usar **Pulgaris-0.15.2-code-win-x64.zip** com **Pulgaris-0.15.2-update.json**, em Sistema e suporte → Conferir pacote de atualização… → Aplicar e fechar. A atualização menor inclui o manual e preserva os modelos de voz.
 
-**466 testes automatizados passaram**, incluindo confirmação, cancelamento,
-senha incorreta, bloqueio por tentativas, revogação do token anterior,
-preservação do período contratado e integração HTTP com banco isolado.
-Os pacotes do aplicativo e do portal tiveram integridade conferida; o pacote
-menor contém 420 arquivos de código, com assinatura verificada e sem modelos.
+A Wiki também pode ser obtida separadamente em **Pulgaris-0.15.2-Manual-Wiki.zip**: extraia o arquivo e abra index.html. Não é preciso instalar outro programa.
 
-Confira **SHA256SUMS.txt**, **INSTALACAO.md** e **REQUISITOS.md**. Os instaladores
-Inno Setup permanecem sem assinatura Authenticode comercial.
+## Compatibilidade e preservação
+
+Biblioteca, treinamentos, configurações, ativação e período de acesso são preservados. Não há migração de banco nesta versão.
+
+O preparador **1.3.0** e os modelos congelados de geração, embeddings, Whisper e Kokoro permanecem os mesmos. As imagens locais do aplicativo foram preservadas. O instalador mantém o Inno Setup e a identidade visual aprovada.
+
+Consulte **INSTALACAO.md**, **ATUALIZACAO.md**, **MANUAL.md**, **REQUISITOS.md** e **SHA256SUMS.txt**.
