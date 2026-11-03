@@ -3,9 +3,9 @@
 Plataforma local de simulações, treinamento de comunicação e preparação oral
 com o conhecimento do próprio usuário: **Academic, Interview, Oral e Present**.
 
-**Versão atual: aplicativo 0.14.1 e preparador 1.3.0.**
+**Versão atual: aplicativo 0.15.0 e preparador 1.3.0.**
 Os instaladores, changelog e hashes estão na
-[release v0.14.1](https://github.com/marcelocorni/pulgaris-ia-releases/releases/tag/v0.14.1).
+[release v0.15.0](https://github.com/marcelocorni/pulgaris-ia-releases/releases/tag/v0.15.0).
 Os fontes ficam em repositório privado. A licença do aplicativo é comercial;
 dependências e modelos conservam suas respectivas licenças.
 
@@ -17,7 +17,7 @@ diretamente aos arquivos oficiais; os instaladores ficam no GitHub.
 
 | Arquivo | Finalidade |
 |---|---|
-| Pulgaris-0.14.1-Setup-win-x64.exe | Aplicativo Windows x64, runtime .NET, Whisper Small/Base e Kokoro pt-BR incluídos. |
+| Pulgaris-0.15.0-Setup-win-x64.exe | Aplicativo Windows x64, runtime .NET, Whisper Small/Base e Kokoro pt-BR incluídos. |
 | Pulgaris-Preparador-1.3.0-Setup-win-x64.exe | Assistente pequeno para preparar uma nova pasta no pen drive ou HD. Runtime e modelos são baixados depois. |
 | SHA256SUMS.txt | Hashes dos arquivos desta release. |
 | release.json | Versões e arquivos usados pelos links do portal. |
@@ -62,6 +62,33 @@ volume atuais. Alterar texto, voz, velocidade, pausas ou dicionário exige áudi
 compatível. Itens removidos do cache e a primeira leitura após fechar o aplicativo
 precisam de novo preparo. A concordância usa regras para casos usuais; expressões
 ambíguas podem receber correções no dicionário.
+
+## Projetos, backup e diagnóstico
+
+Em **Projetos e evolução**, reúna até 12 documentos com papéis como currículo,
+vaga, critérios ou slides e escolha um material principal. O projeto pode ser
+selecionado no Simulador e em Perguntar à IA. As sessões preservam as versões
+utilizadas; a evolução é qualitativa e não representa uma nota oficial.
+
+O menu de diagnóstico reúne **Salvar backup…**, **Restaurar um backup…**,
+**Verificar meu ambiente** e exportação do relatório de suporte. O backup pode
+incluir os originais e preserva biblioteca, pronúncias e treinamentos. A
+restauração é aplicada ao reabrir, depois de guardar a base atual; a ativação
+permanece vinculada ao computador. Guarde backups em local protegido.
+
+A extração de PDFs considera layout e tabelas alinhadas. Em páginas digitalizadas,
+o OCR opcional utiliza o recurso de Português do próprio Windows. Se esse recurso
+não estiver disponível, o aplicativo informa a limitação.
+
+As respostas passam por verificação de fontes e uma conferência semântica local.
+Quando não há segurança para concluir, a avaliação fica inconclusiva. Confira
+as fontes; perguntas com várias partes exigem resposta a todas elas.
+
+A versão 0.15.0 inaugura a atualização de código com manifesto assinado.
+Quem usa versões anteriores deve instalar o setup completo desta edição.
+Os pacotes menores serão utilizados nas atualizações posteriores, preservando
+os modelos de voz e os dados. A assinatura do manifesto não é assinatura
+Authenticode do instalador; os EXEs desta edição continuam sem essa assinatura.
 
 ## Modelos e recursos congelados
 

@@ -1,9 +1,9 @@
-# Instalação, atualização e uso — 0.14.1
+# Instalação, atualização e uso — 0.15.0
 
 ## Instalar o aplicativo
 
 Confira o SHA256 do instalador com o arquivo SHA256SUMS.txt da mesma release.
-Feche o Pulgaris e instale **Pulgaris-0.14.1-Setup-win-x64.exe** sobre a instalação
+Feche o Pulgaris e instale **Pulgaris-0.15.0-Setup-win-x64.exe** sobre a instalação
 atual. A biblioteca, histórico, preferências e ativação são preservados.
 O pacote inclui .NET, Whisper Small/Base e Kokoro com Dora, Alex e Santa em pt-BR.
 
@@ -97,6 +97,27 @@ A barra animada indica o preparo. Ouvir novamente, pelo botão ou **Ctrl+Shift+F
 reutiliza o áudio compatível na saída atual. O cache fica somente em memória,
 com limite de 16 áudios/64 MiB, e é limpo ao fechar o aplicativo. Mudanças no texto,
 na voz, velocidade, pausas ou dicionário produzem novo áudio quando necessário.
+
+## Novidades de operação na 0.15.0
+
+- **Projetos e evolução:** crie o projeto, selecione os materiais e seus papéis,
+  marque um documento principal e salve. Escolha o projeto no Simulador ou em
+  Perguntar à IA. O uso de apenas um documento continua disponível.
+- **Backup e restauração:** no menu de diagnóstico, use Salvar backup… e confira
+  a opção de incluir originais. Para restaurar, escolha o ZIP e reinicie depois
+  da confirmação. A base anterior é preservada; a ativação não é transferida.
+- **Verificar meu ambiente:** confira requisitos, componentes e modelos. A
+  conferência completa dos hashes pode demorar. O relatório de suporte exportado
+  contém verificações e metadados, sem textos de documentos, respostas ou áudio.
+- **Interrupções:** as operações têm etapas e cancelamento. Retomar uma sessão
+  recupera os dados salvos sem enviar novamente as respostas por conta própria.
+- **PDF digitalizado:** o OCR opcional depende do reconhecimento de Português
+  instalado no Windows. O processamento continua local.
+
+Esta edição é a primeira com atualização menor assinada. Para migrar da 0.14.1
+ou anterior, use o instalador completo 0.15.0. Nas versões posteriores, o pacote
+de código será acompanhado de um manifesto próprio; não substitua arquivos ou
+modelos manualmente. Mantenha backup antes de atualizar.
 
 ## Verificação e limites
 

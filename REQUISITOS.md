@@ -1,4 +1,4 @@
-# Compatibilidade — aplicativo 0.14.1 e preparador 1.3.0
+# Compatibilidade — aplicativo 0.15.0 e preparador 1.3.0
 
 | Item | Perfil suportado |
 |---|---|
@@ -30,3 +30,12 @@ Ativação não acompanha automaticamente a mídia externa para outro PC. A cont
 admite uma instalação ativa e até duas horas offline, limitadas ao período válido.
 Consulte as condições atualizadas no portal. A confirmação dos requisitos
 não afasta os direitos legais do consumidor.
+
+## Recursos opcionais
+
+PDFs digitalizados podem usar o recurso OCR de Português instalado no Windows.
+Não há um modelo PaddleOCR incluído no aplicativo. O texto extraído de tabelas
+complexas e páginas digitalizadas deve ser conferido pelo usuário.
+
+Backups, originais e arquivos temporários precisam de espaço adicional no disco.
+O aplicativo oferece uma verificação do ambiente antes de iniciar os modelos.
