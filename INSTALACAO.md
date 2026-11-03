@@ -1,16 +1,17 @@
-# Instalação, atualização e uso — 0.15.0
+# Instalação, atualização e uso — 0.15.1
 
 ## Instalar o aplicativo
 
 Confira o SHA256 do instalador com o arquivo SHA256SUMS.txt da mesma release.
-Feche o Pulgaris e instale **Pulgaris-0.15.0-Setup-win-x64.exe** sobre a instalação
+Feche o Pulgaris e instale **Pulgaris-0.15.1-Setup-win-x64.exe** sobre a instalação
 atual. A biblioteca, histórico, preferências e ativação são preservados.
 O pacote inclui .NET, Whisper Small/Base e Kokoro com Dora, Alex e Santa em pt-BR.
 
 Ative em **Conta e ativação** com sua conta do portal e período válido.
-A conta de administrador não recebe licença de uso automaticamente.
 Uma instalação ativa por conta; até duas horas offline, limitadas à validade
-do período contratado. Libere o vínculo no portal para trocar de computador.
+do período contratado. Se houver um vínculo anterior, use **Liberar vínculo
+anterior…** no aplicativo, confira a confirmação, digite novamente sua senha e
+escolha **Confirmar e ativar aqui**. Cancelar não altera a sessão anterior.
 
 ## Preparar outro pen drive ou HD
 
@@ -114,10 +115,9 @@ na voz, velocidade, pausas ou dicionário produzem novo áudio quando necessári
 - **PDF digitalizado:** o OCR opcional depende do reconhecimento de Português
   instalado no Windows. O processamento continua local.
 
-Esta edição é a primeira com atualização menor assinada. Para migrar da 0.14.1
-ou anterior, use o instalador completo 0.15.0. Nas versões posteriores, o pacote
-de código será acompanhado de um manifesto próprio; não substitua arquivos ou
-modelos manualmente. Mantenha backup antes de atualizar.
+Para migrar da 0.15.0, você pode usar o pacote menor 0.15.1 e seu manifesto
+assinado, conforme ATUALIZACAO.md, ou instalar o setup completo. De versões
+anteriores à 0.15.0, use o instalador completo. Mantenha backup antes de atualizar.
 
 ## Verificação e limites
 

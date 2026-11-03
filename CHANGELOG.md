@@ -1,41 +1,30 @@
-# Pulgaris 0.15.0 — Windows x64
+# Pulgaris 0.15.1 — Windows x64
 
-Aplicativo **0.15.0**, preparador **1.3.0**. Homologação concluída em **3 de novembro de 2026**.
+Aplicativo **0.15.1**, preparador **1.3.0**. Publicação autorizada em **3 de novembro de 2026**.
 
-## O que mudou
+## Resolver o vínculo sem depender do suporte
 
-- Conferência semântica das avaliações e respostas, com checagem das partes explícitas da pergunta e citações verificadas.
-- Recuperação documental com contexto adaptativo, trechos vizinhos e cache limitado; extração de PDFs por layout, tabelas alinhadas e OCR opcional em português pelo Windows.
-- Operações com etapas, cancelamento e registro de interrupções; recuperação das respostas salvas sem reenvio automático.
-- Backup consistente, cópia automática antes de migrações e restauração validada na próxima abertura, preservando a base anterior e o vínculo da instalação.
-- Confirmação de e-mail e recuperação de senha no portal, com links de uso único e prazo de validade.
-- Base para atualizações menores com manifesto assinado, integridade e reversão em caso de falha na verificação de saúde.
-- Projetos com até 12 documentos, papéis, critérios por modalidade e acompanhamento qualitativo das sessões recentes.
-- Verificação do ambiente e exportação de relatório de suporte sem documentos, respostas, áudio ou credenciais.
+- A mensagem explica que uma sessão anterior pode permanecer vinculada após reinstalar ou trocar de computador.
+- Em Conta e ativação, **Liberar vínculo anterior…** abre uma confirmação dentro do aplicativo.
+- Informe novamente a senha e escolha **Confirmar e ativar aqui**. O vínculo anterior é liberado e a instalação atual é ativada em uma única operação.
+- Cancelar ou informar senha incorreta preserva a sessão anterior. Trocar o e-mail cancela a confirmação em aberto.
+- Documentos, treinamentos, configurações e período contratado são preservados.
+- A sessão anterior não pode renovar online. Uma confirmação offline já emitida permanece limitada ao seu prazo de até duas horas e à validade contratada.
 
-## Instalar ou atualizar
+## Atualizar
 
-Feche o Pulgaris e instale **Pulgaris-0.15.0-Setup-win-x64.exe**. A biblioteca,
-histórico, configurações e ativação existentes são preservados. Mantenha backup.
-As versões anteriores à 0.15.0 devem usar o instalador completo; esta edição
-inaugura o mecanismo de atualização menor para as próximas versões.
+O instalador completo atualiza a instalação existente. Quem usa a 0.15.0 pode
+optar pelo ZIP menor de código e seu manifesto assinado, conforme **ATUALIZACAO.md**.
+A atualização do portal foi publicada junto com o aplicativo para habilitar o fluxo.
+O preparador 1.3.0 e os modelos congelados permanecem iguais.
 
-O preparador 1.3.0 e os modelos congelados permanecem compatíveis. Não é necessário
-baixar os modelos novamente em um ambiente preparado e validado. O preparador
-é pequeno; baixa e verifica runtime e modelos na unidade escolhida.
+## Validação
 
-## Validação e limites
+**466 testes automatizados passaram**, incluindo confirmação, cancelamento,
+senha incorreta, bloqueio por tentativas, revogação do token anterior,
+preservação do período contratado e integração HTTP com banco isolado.
+Os pacotes do aplicativo e do portal tiveram integridade conferida; o pacote
+menor contém 420 arquivos de código, com assinatura verificada e sem modelos.
 
-Foram aprovados **445 testes automatizados**, verificações nativas do pacote e
-testes com Qwen e Ornith. A matriz final teve 13 casos sintéticos por modelo e
-não registrou aprovações indevidas; houve avaliações inconclusivas. Isso não
-representa uma taxa geral de acerto nem uma validação pedagógica humana.
-A IA pode recusar uma avaliação sem segurança; confira as fontes.
-
-O OCR depende do recurso de Português do Windows. Gemma continua experimental.
-Os instaladores Inno Setup desta edição não possuem assinatura Authenticode.
-O manifesto assinado de atualização é um mecanismo distinto dessa assinatura.
-
-Leia **INSTALACAO.md** e **REQUISITOS.md**. Confira os arquivos em **SHA256SUMS.txt**.
-Os modelos de voz homologados acompanham o aplicativo; modelos GGUF e llama.cpp
-são obtidos pelo preparador. Os fontes permanecem no repositório privado.
+Confira **SHA256SUMS.txt**, **INSTALACAO.md** e **REQUISITOS.md**. Os instaladores
+Inno Setup permanecem sem assinatura Authenticode comercial.
