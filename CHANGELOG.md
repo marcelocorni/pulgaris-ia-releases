@@ -1,5 +1,17 @@
 # Pulgaris 0.15.2 — Wiki no menu Ajuda
 
+## 0.15.3 - correção da captura e transcrição
+
+- Corrige o encerramento da captura e a transcrição no Simulador e em Perguntar à IA.
+- O comando primeiro conclui a gravação e depois inicia a transcrição, inclusive pelo atalho Ctrl+Shift+F8.
+- Evita transcrições duplicadas ao acionar Parar repetidamente.
+- A fala transcrita permanece disponível para revisão. Não é enviada automaticamente à IA.
+- Preserva biblioteca, treinamentos, configurações e ativação.
+
+O preparador permanece na versão 1.3.0, sem alterações nos modelos congelados.
+Feche o Pulgaris antes de instalar esta atualização sobre a instalação existente.
+Também está disponível o pacote de atualização de código assinado, sem baixar novamente os modelos de voz.
+
 Aplicativo **0.15.2**, preparador **1.3.0**. Publicação autorizada em **3 de novembro de 2026**.
 
 ## O que mudou
